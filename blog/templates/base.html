@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title %}Métodos Contraceptivos{% endblock title %}</title>
+
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <!--Navegação-->
+        <div class="nav container">
+        <!--Logo-->
+        <a href="#" class="logo">Loucos por <span>pontos</span></a>
+        <!--Botão de Login-->
+        <a href="referencias.html" class="login">Referências</a>
+        </div>
+    </header>
+
+    <!--Conteúdo-->
+    {% block content %}
+    {% endblock content %}
+
+    <!--Rodapé-->
+    <div class="rodape container">
+        <p>Copyright &#169 2024.</p>
+        <div class="social">
+            <a href="https://www.instagram.com/infoweb_2022/" target=”_blank”><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target=”_blank”><i class='bx bxl-facebook'></i></a>
+        </div>
+    </div>
+
+    <!--JQuary Link-->
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <!--Link do JavaScript-->
+    <script src="main.js">
+    </script>
+</body>
+</html>

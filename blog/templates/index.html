@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!--Home-->
+    <section class="home" id="home">
+        <div class="home-texto container">
+            <h2 class="home-titulo">Métodos Contraceptivos</h2>
+            <span class="home-subtitulo">Opções e Eficácia</span>
+        </div>
+    </section>
+
+    <!--Posts-->
+    <section class="post container">
+        <!--Posts-->
+        {% for post in posts %}
+            <div class="post-caixa hormonal">
+                <img src="{{ post.imagem }}" alt="" class="post-img"> 
+                <h2 class="categoria">{{ post.categoria }}</h2>
+                <a href="hormonais.html" class="post-titulo">{{ post.titulo }}</a>
+                <p class="post-descricao">{{ post.descricao }}</p>
+            </div>
+        {% endfor %}
+        
+
+    </section>
+{% endblock content %}
