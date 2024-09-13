@@ -15,7 +15,11 @@
         <!--Posts-->
         {% for post in posts %}
             <div class="post-caixa hormonal">
-                <img src="{{ post.imagem }}" alt="" class="post-img"> 
+                {% if post.imagem %}
+                    <img src="{{ post.imagem.url }}" alt="" class="post-img">
+                {% else %}
+                    <img src="{% static 'assets/placeholder.png' %}" alt="" class="post-img">
+                {% endif %}
                 <h2 class="categoria">{{ post.categoria }}</h2>
                 <a href="hormonais.html" class="post-titulo">{{ post.titulo }}</a>
                 <p class="post-descricao">{{ post.descricao }}</p>
