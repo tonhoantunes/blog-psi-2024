@@ -14,14 +14,14 @@
     <section class="post container">
         <!--Posts-->
         {% for post in posts %}
-            <div class="post-caixa hormonal">
+            <div class="post-caixa">
                 {% if post.imagem %}
                     <img src="{{ post.imagem.url }}" alt="" class="post-img">
                 {% else %}
                     <img src="{% static 'assets/placeholder.png' %}" alt="" class="post-img">
                 {% endif %}
                 <h2 class="categoria">{{ post.categoria }}</h2>
-                <a href="hormonais.html" class="post-titulo">{{ post.titulo }}</a>
+                <a href="{% url "postagem" id=post.id %}" class="post-titulo">{{ post.titulo }}</a>
                 <p class="post-descricao">{{ post.descricao }}</p>
             </div>
         {% endfor %}

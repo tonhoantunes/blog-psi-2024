@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ post.titulo }}{% endblock title %}
+
+{% block content %}
+    <!--Conteúdo do Post-->
+    <section class="post-cabecalho">
+        <div class="conteudo-cabecalho post-container">
+            <!--Voltar Para a Home-->
+            <a href="{% url "index" %}" class="voltar-home">Voltar para Home</a>
+            <!--Título-->
+            <h1 class="cabecalho-titulo">{{ post.titulo }}</h1><!--Falta alterar o título do cabeçalho-->
+            <!--Imagem do Post-->
+            {% if post.imagem %}
+                <img src="{{ post.imagem.url }}" alt="" class="cabecalho-img">
+            {% else %}
+                <img src="{% static "assets/placeholder.png" %}" alt="" class="cabecalho-img">
+            {% endif %}
+        </div>
+    </section>
+
+    <!--Posts-->
+    <section class="post-conteudo post-container">
+        <h2 class="sub-titulo">{{ post.subtitulo }}</h2><!--Falta alterar o subtítulo-->
+        <!--Falta alterar o texto do post-->
+        <p class="post-texto">{{ post.conteudo }}</p>
+
+    <!--Compartilhamento-->
+    <div class="compartilhar post-container">
+        <span class="compartilhar-titulo">Compartilhe esse artigo</span>
+        <div class="social">
+            <a href="https://www.instagram.com/infoweb_2022/" target=”_blank”><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target=”_blank”><i class='bx bxl-facebook'></i></a>
+        </div>
+    </div>
+
+{% endblock content %}
