@@ -336,6 +336,17 @@ header.shadow .logo {
     font-size: 1.1rem;
 }
 
+/*Referências*/
+.link_ref {
+    display: block;
+    padding: 5px;
+
+}
+
+.link_ref:hover {
+    color: var(--second-color);
+}
+
 /*Responsividade*/
 @media (max-width: 1060px) {
     .container {
